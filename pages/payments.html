@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payments</title>
+  <link rel="stylesheet" href="../css/payments.css">
+  <script src="../scripts/payments.js"></script>
+</head>
+<body>
+  <h1>Payments</h1>
+
+  <form action="/process-payment" method="post">
+    <input type="hidden" name="bag_items" value="bag_items_json_string">
+
+    <label for="card_number">Card Number:</label>
+    <input type="text" name="card_number" id="card_number">
+
+    <label for="card_expiry_date">Card Expiry Date:</label>
+    <input type="text" name="card_expiry_date" id="card_expiry_date">
+
+    <label for="card_cvv">Card CVV:</label>
+    <input type="text" name="card_cvv" id="card_cvv">
+
+    <button type="submit">Pay Now</button>
+    <button class="payments-page-cancel-button">
+        <a href="../pages/bag.html">Cancel</a>
+    </button>
+</form>
+</body>
+</html>
